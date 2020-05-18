@@ -1,0 +1,23 @@
+<h1>Twist Emoji options</h1>
+
+<ng-container *ngIf="emojis$ | async; let emojis">
+  <mat-form-field class="form-block" appearance="outline">
+    <mat-label>Reactions</mat-label>
+    <textarea
+      [formControl]="emojis$ | async"
+      cols="10"
+      rows="8"
+      matInput
+    ></textarea>
+  </mat-form-field>
+
+  <button
+    mat-stroked-button
+    class="form-block"
+    (click)="resetDefault$.next(undefined)"
+    type="button"
+    [disabled]="(setting$ | async)?.type !== EmojiSetting.CUSTOM"
+  >
+    Reset to default
+  </button>
+</ng-container>

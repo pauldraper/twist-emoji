@@ -1,0 +1,22 @@
+{
+  "content_scripts": [
+    {
+      "js": ["runtime.js", "content.js"],
+      "matches": ["https://twist.com/*"],
+      "run_at": "document_start"
+    }
+  ],
+  "description": "Add reactions to twist.com",
+  "homepage_url": "https://github.com/pauldraper/twist-emoji",
+  "icons": {
+    "16": "asset/icon-16.png",
+    "48": "asset/icon-48.png",
+    "128": "asset/icon-128.png"
+  },
+  "manifest_version": 2,
+  "name": "Twist Emoji",
+  "options_page": "ui.html",
+  "permissions": ["storage"],
+  "version": "0.0.1",
+  "web_accessible_resources": ["*.js", "*.js.map"]
+}

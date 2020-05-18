@@ -1,0 +1,31 @@
+h1 {
+  margin-bottom: 15px;
+}
+
+mat-form-field {
+  display: block;
+  width: 405px;
+}
+
+.mat-radio-button {
+  margin: 0 8px;
+}
+
+mat-radio-group {
+  margin-bottom: 25px;
+}
+
+button {
+  margin-right: 5px;
+}
+
+.form-block {
+  display: block;
+}
+
+textarea:not(:disabled) {
+  resize: none;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 14px;
+}

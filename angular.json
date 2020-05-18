@@ -1,0 +1,52 @@
+{
+  "defaultProject": "extension",
+  "projects": {
+    "extension": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "aot": true,
+            "assets": [
+              "src/asset",
+              {
+                "glob": "manifest.json",
+                "input": "src",
+                "output": "/"
+              }
+            ],
+            "customWebpackConfig": {
+              "path": "webpack-extra.config.js",
+              "mergeStrategies": { "externals": "replace" }
+            },
+            "outputPath": "target/ng/dev",
+            "index": "src/ui.html",
+            "main": "src/ui.ts",
+            "tsConfig": "tsconfig.json",
+            "stylePreprocessorOptions": { "includePaths": ["node_modules"] },
+            "styles": ["src/global.scss"],
+            "vendorChunk": false
+          },
+          "configurations": {
+            "production": {
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/env/environment.ts",
+                  "with": "src/env/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputPath": "target/ng/prod",
+              "extractCss": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "version": 1
+}
