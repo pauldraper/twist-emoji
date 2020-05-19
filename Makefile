@@ -63,7 +63,11 @@ target/node_modules.target: package.json $(wildcard yarn.lock)
 # Angular
 ###
 
-NG_SRC := angular.json tsconfig.json webpack-extra.config.js $(shell find src -name '*.css' -o -name '*.html' -o -name '*.json' -o -name '*.scss' -o -name '*.ts')
+NG_SRC := \
+	angular.json \
+	tsconfig.json \
+	webpack-extra.config.js \
+	$(shell find src -name '*.html' -o -name '*.json' -o -name '*.png' -o -name '*.scss' -o -name '*.ts')
 
 .PHONY: build
 build: target/ng/dev.target

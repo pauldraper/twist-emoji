@@ -1,6 +1,6 @@
 {
   "browser_specific_settings": {
-    "gecko": { "id": "twistemoji@example.com" }
+    "gecko": { "id": "{dd18225d-22a9-4d6a-81a0-f18e17e61c62}" }
   },
   "content_scripts": [
     {
