@@ -1,4 +1,7 @@
 {
+  "browser_specific_settings": {
+    "gecko": { "id": "twistemoji@example.com" }
+  },
   "content_scripts": [
     {
       "js": ["runtime.js", "content.js"],
@@ -16,6 +19,7 @@
   "manifest_version": 2,
   "name": "Twist Emoji",
   "options_page": "ui.html",
+  "options_ui": { "page": "ui.html" },
   "permissions": ["storage"],
   "version": "0.0.1",
   "web_accessible_resources": ["*.js", "*.js.map"]
