@@ -5,7 +5,7 @@ import { EmojiSetting, resolveEmojis } from './setting';
 
 const emojis$ = fromEvent(document, EmojiEvent.SETTING).pipe(
   map((event) => {
-    const setting: EmojiSetting = (<CustomEvent>event).detail;
+    const setting: EmojiSetting = JSON.parse((<CustomEvent>event).detail);
     return resolveEmojis(setting);
   }),
 );

@@ -7,7 +7,9 @@ const dispatchEmojiSetting = fromEvent(document, EmojiEvent.PAGE_LOAD)
   .pipe(switchMapTo(storedEmojiSetting))
   .pipe(
     tap((emoji) => {
-      const event = new CustomEvent(EmojiEvent.SETTING, { detail: emoji });
+      const event = new CustomEvent(EmojiEvent.SETTING, {
+        detail: JSON.stringify(emoji),
+      });
       document.dispatchEvent(event);
     }),
   );
