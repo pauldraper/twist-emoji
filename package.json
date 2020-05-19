@@ -25,6 +25,7 @@
     "typescript": "~3.8.0"
   },
   "license": "MIT",
+  "name": "twist-emoji",
   "private": true,
   "version": "0.0.0"
 }
