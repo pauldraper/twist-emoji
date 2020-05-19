@@ -18,7 +18,7 @@ emojis$.subscribe((e) => (emojis = e));
 const original = Array.prototype.map;
 Array.prototype.map = function (): any {
   return original.apply(
-    emojis && this[0] === '👍' ? emojis : this,
+    emojis && this[0] === '👍' && this.length === 10 ? emojis : this,
     <any>arguments,
   );
 };
