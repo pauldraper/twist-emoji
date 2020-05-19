@@ -21,6 +21,6 @@
   "options_page": "ui.html",
   "options_ui": { "page": "ui.html" },
   "permissions": ["storage"],
-  "version": "0.0.1",
+  "version": "1.0.0",
   "web_accessible_resources": ["*.js", "*.js.map"]
 }
